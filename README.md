@@ -1,4 +1,17 @@
-# The Enphase Prometheus docker app
+# The Enphase Prometheus docker app (FORK)
+
+This is an edited version of the application from which the consumption has been removed. It seemed to me the app
+expects an Envoy S metered and cannot deal with a standard version which does not provide consumption. This fork works
+with an Envoy S standard.
+
+The image has also rebased on Debian Bookworm and built the image on amd64, which is available as
+`ghcr.io/tomwiggers/enphase-prometheus:0.2.0`
+(`sha256:92311e4ceb49f6b1671d44f486c5087cabd5d63ec2218947c7bfb70ea0014bcc`).
+
+Final note, I used the site ID instead of the site name for the env var `ENPHASE_SITE`. This can be taken from the URL
+in Enlighten.
+
+Thanks to original creator of this app for their work!
 
 ## getting the enlighten token for your envoy
 
