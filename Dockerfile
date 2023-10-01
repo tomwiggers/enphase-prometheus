@@ -12,7 +12,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=/bin --filename=composer
 
 RUN mkdir -p /app
-RUN git clone https://github.com/mooseh/enphase-prometheus.git /app
+RUN git clone https://github.com/tomwiggers/enphase-prometheus.git /app
 
 WORKDIR /app/src
 RUN cp .env.example .env

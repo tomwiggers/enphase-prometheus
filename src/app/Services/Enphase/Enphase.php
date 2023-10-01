@@ -233,12 +233,6 @@ class Enphase {
         $res['production'] = collect($res['production'])->mapWithKeys(function($type, $key){
             return ["{$type['type']}_{$key}" => $type];
         })->toArray();
-        $res['consumption'] = collect($res['consumption'])->mapWithKeys(function($type, $key){
-            if(isset($type['measurementType'])){
-                return ["{$type['measurementType']}" => $type];
-            }
-            return ["{$type['type']}_{$key}" => $type];
-        })->toArray();
         return $res;
     }
 
